@@ -1,0 +1,42 @@
+
+// 添加多个自定义属性，可以通过ext代码块
+ext{
+
+    userName = "xibei"
+
+    //开发环境配置
+    buildEnv = [
+            compileSdkVersion         :  29,
+            buildToolsVersion         : "29.0.1",
+            applicationId             : "com.xibei.component",
+            minSdkVersion             : 21,
+            targetSdkVersion          : 29,
+            versionCode               : 1,
+            versionName               : "1.0",
+            testInstrumentationRunner : "androidx.test.runner.AndroidJUnitRunner"
+
+    ]
+
+    //生产开发环境标标识
+    isRelease = true
+
+    //生产开发环境配置
+    url = [
+            "debug" : "https://github.com/jiezongnewstar/debug",
+            "release" : "https://github.com/jiezongnewstar/release"
+    ]
+
+
+    //统一版本，这里举例androidx  ，其他还有support包统一配置
+    androidxVersion = "1.1.0"
+
+    //依赖   注意，这里在配置版本号的时候，必须使用英文双引号
+    dependence = [
+            appcompat :"androidx.appcompat:appcompat:${androidxVersion}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:1.1.3"
+    ]
+
+
+
+}
+
